@@ -22,22 +22,3 @@ function gsb_feature_image_fpp_entity_info_alter(&$entity_info) {
     ),
   );
 }
-
-/**
- * Implements hook_form_alter()
- */
-function gsb_feature_image_fpp_form_alter(&$form, &$form_state, $form_id) {
-
-  if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && $form['#bundle'] == 'image') {
-
-    $form['#after_build'][] = 'gsb_feature_image_fpp_edit_button_form_alter';
-
-  }
-
-}
-
-function gsb_feature_image_fpp_edit_button_form_alter($form) {
-  $language = $form['language']['#value'];
-  $form['field_file_single_public'][$language][0]['edit']['#access'] = false;
-  return $form;
-}
