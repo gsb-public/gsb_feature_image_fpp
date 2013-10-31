@@ -4,6 +4,12 @@
  * Code for the GSB Feature Image FPP feature.
  */
 
+include_once 'gsb_feature_image_fpp.features.inc';
+/**
+ * @file
+ * Code for the GSB Feature Image FPP feature.
+ */
+
 /**
  * Implements hook_entity_alter().
  */

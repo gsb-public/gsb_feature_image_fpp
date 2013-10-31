@@ -14,7 +14,7 @@ function gsb_feature_image_fpp_field_default_field_instances() {
   $field_instances['fieldable_panels_pane-image-field_file_single_public'] = array(
     'bundle' => 'image',
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Narrow image width is 270, wide image width is 570, double wide image width is 870.  Proceed with caution and limit the use of double wide images as responsive performance is negatively impacted by images of this size.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -80,6 +80,7 @@ function gsb_feature_image_fpp_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Image');
+  t('Narrow image width is 270, wide image width is 570, double wide image width is 870.  Proceed with caution and limit the use of double wide images as responsive performance is negatively impacted by images of this size.');
 
   return $field_instances;
 }
