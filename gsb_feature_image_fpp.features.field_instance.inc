@@ -33,6 +33,8 @@ function gsb_feature_image_fpp_field_default_field_instances() {
     'label' => 'Image',
     'required' => 1,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'description_field' => 0,
       'file_directory' => 'media-center',
       'file_extensions' => 'txt',
@@ -41,7 +43,7 @@ function gsb_feature_image_fpp_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'media',
+      'module' => 'file',
       'settings' => array(
         'allowed_schemes' => array(
           'private' => 'private',
@@ -71,7 +73,7 @@ function gsb_feature_image_fpp_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'media_generic',
+      'type' => 'file_generic',
       'weight' => -3,
     ),
     'workbench_access_field' => 0,

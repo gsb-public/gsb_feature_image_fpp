@@ -6,6 +6,7 @@ version = 7.x-1.0
 project = gsb_feature_image_fpp
 dependencies[] = ctools
 dependencies[] = features
+dependencies[] = file
 dependencies[] = file_entity
 dependencies[] = gsb_feature_base_fields
 dependencies[] = media
