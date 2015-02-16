@@ -10,6 +10,98 @@
 function gsb_feature_image_fpp_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'fieldable_panels_pane-image-field_body'
+  $field_instances['fieldable_panels_pane-image-field_body'] = array(
+    'bundle' => 'image',
+    'custom_add_another' => '',
+    'custom_remove' => '',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'conditions' => array(
+            0 => array(
+              'condition' => '',
+            ),
+          ),
+        ),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'fieldable_panels_pane',
+    'field_name' => 'field_body',
+    'label' => 'Caption',
+    'required' => 0,
+    'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'gsb_html_text' => 0,
+          'gsb_wysiwyg_text' => 0,
+          'image_resource_caption' => 'image_resource_caption',
+          'markdown' => 0,
+          'plain_text' => 0,
+          'slideshow' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'gsb_html_text' => array(
+              'weight' => -9,
+            ),
+            'gsb_wysiwyg_text' => array(
+              'weight' => -10,
+            ),
+            'image_resource_caption' => array(
+              'weight' => 0,
+            ),
+            'markdown' => array(
+              'weight' => 0,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+            'slideshow' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'maxlength_js' => '',
+        'maxlength_js_enforce' => 0,
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'maxlength_js_truncate_html' => 0,
+        'rows' => 2,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'fieldable_panels_pane-image-field_image_single_public'
   $field_instances['fieldable_panels_pane-image-field_image_single_public'] = array(
     'bundle' => 'image',
@@ -83,6 +175,7 @@ function gsb_feature_image_fpp_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Caption');
   t('Image');
 
   return $field_instances;
