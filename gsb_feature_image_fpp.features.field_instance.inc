@@ -23,11 +23,7 @@ function gsb_feature_image_fpp_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'conditions' => array(
-            0 => array(
-              'condition' => '',
-            ),
-          ),
+          'conditions' => array(),
         ),
         'type' => 'text_default',
         'weight' => 3,
@@ -112,12 +108,13 @@ function gsb_feature_image_fpp_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
+        'module' => 'image',
         'settings' => array(
           'conditions' => array(),
-          'file_view_mode' => 'default',
+          'image_link' => '',
+          'image_style' => '',
         ),
-        'type' => 'file_rendered',
+        'type' => 'image',
         'weight' => 2,
       ),
     ),

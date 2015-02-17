@@ -21,12 +21,6 @@ function gsb_feature_image_fpp_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'figure',
-          'ow-cl' => 'field-image',
-          'ow-def-cl' => FALSE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -36,7 +30,7 @@ function gsb_feature_image_fpp_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
           'ow-el' => 'figcaption',
-          'ow-cl' => 'field-image-caption',
+          'ow-cl' => '',
           'ow-def-cl' => FALSE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
@@ -77,7 +71,7 @@ function gsb_feature_image_fpp_ds_layout_settings_info() {
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'ds_content' => 'figure',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
