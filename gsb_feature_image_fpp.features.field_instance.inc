@@ -104,7 +104,10 @@ function gsb_feature_image_fpp_field_default_field_instances() {
     'custom_add_another' => '',
     'custom_remove' => '',
     'deleted' => 0,
-    'description' => '',
+    'description' => '<ul>
+<li>Double Wide: 1740 x 516 px (recommended height)</li>
+<li>Wide: 1140 x 550 px (recommended height)</li>
+<li>Narrow: 540 x 316 px</li></ul>',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -160,7 +163,6 @@ function gsb_feature_image_fpp_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
@@ -172,6 +174,10 @@ function gsb_feature_image_fpp_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<ul>
+<li>Double Wide: 1740 x 516 px (recommended height)</li>
+<li>Wide: 1140 x 550 px (recommended height)</li>
+<li>Narrow: 540 x 316 px</li></ul>');
   t('Caption');
   t('Image');
 
