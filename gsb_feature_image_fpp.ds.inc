@@ -55,11 +55,6 @@ function gsb_feature_image_fpp_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_text_equivalent' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['fieldable_panels_pane|image|default'] = $ds_fieldsetting;
 
