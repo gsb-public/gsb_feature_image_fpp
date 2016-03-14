@@ -7,6 +7,21 @@
 include_once 'gsb_feature_image_fpp.features.inc';
 
 /**
+ * Implements hook_field_formatter_info().
+ */
+function gsb_feature_image_fpp_field_formatter_info() {
+  $formatters = array(
+    'image_fpp_enlarge' => array(
+      'label' => t('Image fpp with enlarge button'),
+      'field types' => array('image'),
+      'settings' => array('image_style' => '', 'image_link' => ''),
+    ),
+  );
+
+  return $formatters;
+}
+
+/**
  * Implements hook_entity_alter().
  */
 function gsb_feature_image_fpp_entity_info_alter(&$entity_info) {
@@ -41,4 +56,30 @@ function gsb_feature_image_fpp_edit_button_form_alter($form) {
   $language = $form['language']['#value'];
   $form['field_file_single_public'][$language][0]['edit']['#access'] = false;
   return $form;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function gsb_feature_image_fpp_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  if ($items[0]['filemime'] == 'image/gif') {
+    $display['settings']['image_style'] = '';
+  }
+  $elements = image_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display);
+
+  // If field_click_to_expand is enabled, then add a link to open image in a new window.
+  if (!empty($entity->field_click_to_expand[LANGUAGE_NONE][0]['value'])) {
+    foreach ($elements as &$element) {
+      $element['#suffix'] = '<div class="image-fpp-enlarge-bar">';
+      $element['#suffix'] .= l(t('View Larger'), file_create_url($entity->field_image_single_public['und'][0]['uri']), array(
+        'attributes' => array(
+          'class' => array('image-fpp-enlarge-button'),
+          'target' => '_blank'
+        ),
+      ));
+      $element['#suffix'] .= '</div>';
+    }
+  }
+
+  return $elements;
 }
