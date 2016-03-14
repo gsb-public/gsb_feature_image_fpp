@@ -155,13 +155,13 @@ function gsb_feature_image_fpp_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'gsb_feature_image_fpp',
         'settings' => array(
           'conditions' => array(),
           'image_link' => '',
           'image_style' => '',
         ),
-        'type' => 'image',
+        'type' => 'image_fpp_enlarge',
         'weight' => 2,
       ),
     ),
