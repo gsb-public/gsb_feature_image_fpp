@@ -66,6 +66,9 @@ function gsb_feature_image_fpp_field_formatter_view($entity_type, $entity, $fiel
     $display['settings']['image_style'] = '';
   }
   $elements = image_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display);
+  if ($display['module'] == "gsb_feature_image_fpp") {
+      $elements[0]['#image_style'] = "compress";
+  }
 
   // If field_click_to_expand is enabled, then add a link to open image in a new window.
   if (!empty($entity->field_click_to_expand[LANGUAGE_NONE][0]['value'])) {
